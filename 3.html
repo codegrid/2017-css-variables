@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Demo</title>
+<style>
+:root {
+  --box-color: green;
+}
+@media (min-width: 400px) { /* 400pxより大きい */
+  :root { --box-color: chocolate; }
+}
+@media (min-width: 600px) { /* 600pxより大きい */
+  :root { --box-color: limegreen; }
+}
+@media (min-width: 800px) { /* 800pxより大きい */
+  :root { --box-color: skyblue; }
+}
+.box { background-color: var(--box-color); }
+</style>
+</head>
+<body>
+
+<div class="box">
+  The quick brown fox jumps over the lazy dog.
+</div>
+
+</body>
+</html>

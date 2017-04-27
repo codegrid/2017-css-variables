@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Demo</title>
+<style>
+:root {
+  --size: 10px;
+}
+</style>
+</head>
+<body>
+
+<button id="btn" type="button">--sizeプロパティの値を取得する</button>
+
+<script>
+document.getElementById('btn').addEventListener('click', function(){
+  const root = document.documentElement;
+  const style = window.getComputedStyle(root);
+  const raw_value = style.getPropertyValue('--size');
+  const trimmed_value = raw_value.trim();
+  alert(`raw_valueは"${raw_value}"です\ntrimmed_valueは"${trimmed_value}"です。`);
+})
+</script>
+</body>
+</html>

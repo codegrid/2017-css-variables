@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Demo</title>
+<style>
+:root {
+  --is-red: 0; /* = false */
+}
+.parent {
+  --is-red: 1; /* = true */
+}
+.block {
+  background-color: rgb(
+    calc( 255 * var( --is-red ) + 0 * ( 1 - var( --is-red ) ) ),
+    calc( 0 * var( --is-red ) + 255 * (1 - var( --is-red ) ) ),
+    0
+  );
+}
+</style>
+</head>
+<body>
+
+<div class="block">
+  The quick brown fox jumps over the lazy dog.
+</div>
+
+<div class="parent">
+  <div class="block">
+    The quick brown fox jumps over the lazy dog.
+  </div>
+</div>
+
+</body>
+</html>

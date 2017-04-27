@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Demo</title>
+<style>
+.box {
+  font-size: var(--size, 20px);
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  The quick brown fox jumps over the lazy dog.
+</div>
+
+<button id="btn" type="button">--sizeを設定する</button>
+
+<script>
+document.getElementById('btn').addEventListener('click', function(){
+  this.disabled = true;
+  const root = document.documentElement;
+  root.style.setProperty('--size', '10px');
+  alert('--size: 10px;としました');
+})
+</script>
+</body>
+</html>
